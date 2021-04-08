@@ -19,3 +19,14 @@ print(significant)
 
 significant = [p for p in all_predictors if p not in not_significant]
 print(significant)
+
+# Problem 2: Take a list of singular strings and convert them to plural strings
+fruits = ['apple', 'banana', 'strawberry']
+plural_fruits = []
+for fruit in fruits:
+    if fruit[-1:] == 'y':
+        plural = fruit[0:len(fruit)-1] +'ies'
+    else:
+        plural = fruit + 's'
+    plural_fruits.append(plural)
+print(plural_fruits)
