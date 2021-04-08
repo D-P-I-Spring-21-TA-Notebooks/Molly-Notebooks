@@ -37,3 +37,10 @@ for index, value in enumerate(my_list):
     if index%2 != 0:
         my_list[index] = value*2
 print(my_list)
+
+# Problem 4: Iterate over a list of lists. 
+my_data = [['a', 'b'], ['1', '2'], ['C', 'D']]
+for values in my_data:
+    print(values)
+    for value in values:
+        print(value)
