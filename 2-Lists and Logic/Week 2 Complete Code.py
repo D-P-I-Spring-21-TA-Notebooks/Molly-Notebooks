@@ -30,3 +30,10 @@ for fruit in fruits:
         plural = fruit + 's'
     plural_fruits.append(plural)
 print(plural_fruits)
+
+# Problem 3: In a given list, multiply values by 2 if they are located at an odd index.
+my_list = [1, 17, 5, 23, 87, 2]
+for index, value in enumerate(my_list):
+    if index%2 != 0:
+        my_list[index] = value*2
+print(my_list)
