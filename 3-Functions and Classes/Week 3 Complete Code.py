@@ -33,10 +33,10 @@ class SeaTurtle:
     # Define methods
     def introduce(self):
         print('Hi! My name is ' + self.name + '. I am a ' + self.species + \
-              ' sea turtle and I am ' + str(self.age) + ' years old.')
+              ' and I am ' + str(self.age) + ' years old.')
             
     def to_list(self):
-        attributes = [self.name, self.age, self.species]
+        attributes = [self.name, self.age, self.species, self.habitat]
         return attributes
     
     def compare_species(self, other):
@@ -46,13 +46,12 @@ class SeaTurtle:
             print(self.name + ' and ' + other.name + ' are not the same species.')
         
     
-my_turtle = SeaTurtle('Lucy', 11, 'Loggerhead')
+my_turtle = SeaTurtle('Lucy', 11, 'Loggerhead sea turtle')
 my_turtle.introduce()
-print(my_turtle.habitat)
 
-my_other_turtle = SeaTurtle('Jacob', 18, 'Green')
+my_other_turtle = SeaTurtle('Jacob', 18, 'Green sea turtle')
 turtle_data = [my_turtle.to_list(), my_other_turtle.to_list()]
-my_turtles = pd.DataFrame(turtle_data, columns=['Name', 'Age', 'Species'])
+my_turtles = pd.DataFrame(turtle_data, columns=['Name', 'Age', 'Species', 'Habitat'])
 print(my_turtles)
 
 my_turtle.compare_species(my_other_turtle)
