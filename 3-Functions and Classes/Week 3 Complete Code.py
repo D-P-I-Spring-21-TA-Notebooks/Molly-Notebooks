@@ -5,6 +5,7 @@ Created on Thu Apr 15 15:40:49 2021
 
 @author: mollybair
 """
+import pandas as pd
 
 ## Lists and List Attributes ##
 numbers = [99, 5, 17, 23, 3]
@@ -18,3 +19,40 @@ count_threes = numbers.count(3)
 print(count_threes)
 
 ## Create a Class ##
+class SeaTurtle:
+    # Define class variables
+    habitat = 'ocean'
+    
+    # Define constructor
+    def __init__(self, name, age, species):
+        # Name, age, and species are instance variables
+        self.name = name
+        self.age = age
+        self.species = species
+    
+    # Define methods
+    def introduce(self):
+        print('Hi! My name is ' + self.name + '. I am a ' + self.species + \
+              ' sea turtle and I am ' + str(self.age) + ' years old.')
+            
+    def to_list(self):
+        attributes = [self.name, self.age, self.species]
+        return attributes
+    
+    def compare_species(self, other):
+        if (self.species == other.species):
+            print(self.name + ' and ' + other.name + ' are the same species.')
+        else:
+            print(self.name + ' and ' + other.name + ' are not the same species.')
+        
+    
+my_turtle = SeaTurtle('Lucy', 11, 'Loggerhead')
+my_turtle.introduce()
+print(my_turtle.habitat)
+
+my_other_turtle = SeaTurtle('Jacob', 18, 'Green')
+turtle_data = [my_turtle.to_list(), my_other_turtle.to_list()]
+my_turtles = pd.DataFrame(turtle_data, columns=['Name', 'Age', 'Species'])
+print(my_turtles)
+
+my_turtle.compare_species(my_other_turtle)
