@@ -24,8 +24,8 @@ print(significant)
 fruits = ['apple', 'banana', 'strawberry']
 plural_fruits = []
 for fruit in fruits:
-    if fruit[-1:] == 'y':
-        plural = fruit[0:len(fruit)-1] +'ies'
+    if fruit[-1] == 'y':
+        plural = fruit[-1::-1] +'ies'
     else:
         plural = fruit + 's'
     plural_fruits.append(plural)
