@@ -10,6 +10,7 @@ class Student():
     def __init__(self, name, grad_year):
         self.name = name
         self.grad_year = grad_year
+        
     def introduce(self):
         print('This student is named ' + self.name + ' and they will graduate in ' +\
               str(self.grad_year))
